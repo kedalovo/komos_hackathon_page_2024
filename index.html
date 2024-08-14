@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    </head>
+    <style>
+        .btn {
+         display: inline-block; /* Строчно-блочный элемент */
+         background: #8C959D; /* Серый цвет фона */
+         color: #fff; /* Белый цвет текста */
+         padding: 1em; /* Поля вокруг текста */
+         text-decoration: none; /* Убираем подчёркивание */
+         border-radius: 3px; /* Скругляем уголки */
+        }
+    </style>
+</html>
+<body>
+	<div class="form-wrap">
+		<div class="profile"><img src="https://vkclub.su/_data/stickers/zhdun/sticker_vk_zhdun_005.png" width="256" height="256" />
+		  <h1>Создание заявки</h1>
+		</div>
+		<form method="post" action="form.json">
+	        <div>
+			    <label for="name">ФИО контакта</label>
+			    <input type="text" size="40" name="name" required id="name_field">
+		    </div>
+		    <div>
+			    <span>Выберите организацию</span>
+			    <label>
+			        <input type="radio" name="sex" value="organizKI">Комос Информ
+			        <div class="radio-control ki"></div>
+			    </label>
+			    <label>
+			        <input type="radio" name="sex" value="organizOther">Другие
+			        <div class="radio-control other"></div>
+			    </label>
+		    </div>
+		    <div>
+			    <label for="question">Введите ваш вопрос</label>
+			    <input type="text" size="50" name="questiontext" required>
+		    </div>
+		    <div>
+			    <label for="country">Сервис</label>
+			    <select name="country">
+			        <option>Выберите сервис</option>
+			        <option value="UT">УТ проект 123</option> 
+			        <option value="Deskplace">Организация рабочего места</option> 
+			        <option value="UPP">УПП</option> 
+			    </select>
+			    <div class="select-arrow"></div> 
+		    </div>	
+			<a href="buttonEnd.html" class="btn" id="myButton">Отправить заявку</a>
+		</form> 
+	</div>
+</body>
+<script src="test_script.js"></script>
+</html>
